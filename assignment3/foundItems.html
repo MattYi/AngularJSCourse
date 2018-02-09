@@ -1,0 +1,21 @@
+<br><br><br>
+<table border=1>
+  <tr ng-if="items.items.length != 0">
+    <th>name</th>
+    <th>description</th>
+    <th>price small</th>
+    <th>price large</th>
+    <th>operations</th>
+  </tr>
+  <tr ng-repeat="item in items.items">
+    <th>{{item.name}}</th>
+    <th>{{item.description}}</th>
+    <th ng-if="item.price_small && item.small_portion_name">{{item.price_small}} / {{item.small_portion_name}}</th>
+    <th ng-if="!(item.price_small && item.small_portion_name)">N/A</th>
+    <th ng-if="item.price_large && item.large_portion_name">{{item.price_large}} / {{item.large_portion_name}}</th>
+    <th ng-if="!(item.price_large && item.large_portion_name)">N/A</th>
+    <th><button ng-click="items.onRemove({index: $index})">Don't want this one!</button></th>
+  </tr>
+  <div ng-if="items.items.length == 0">Nothing found</div>
+</table>
+
