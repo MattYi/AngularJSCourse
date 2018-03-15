@@ -16,7 +16,7 @@
   	// home
   	.state('home', {
   		url: 'assignment4/',
-  		templateUrl: '/src/templates/home.template.html'
+  		templateUrl: 'assignment4/src/templates/home.template.html'
   	})
 
   	// categories
