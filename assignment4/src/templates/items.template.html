@@ -1,0 +1,19 @@
+<p><a ui-sref="home">Home</a> &gt; <a/ ui-sref="categories">{{ctrl.items.category.name}}</a> &gt; Items</p> 
+categories</p>
+<table>
+  <tr>
+    <th>name</th>
+    <th>description</th>
+    <th>price small</th>
+    <th>price large</th>
+  </tr>
+  <tr ng-repeat="item in ctrl.items.menu_items">
+    <th>{{item.name}}</th>
+    <th>{{item.description}}</th>
+    <th ng-if="item.price_small && item.small_portion_name">{{item.price_small}} / {{item.small_portion_name}}</th>
+    <th ng-if="!(item.price_small && item.small_portion_name)">N/A</th>
+    <th ng-if="item.price_large && item.large_portion_name">{{item.price_large}} / {{item.large_portion_name}}</th>
+    <th ng-if="!(item.price_large && item.large_portion_name)">N/A</th>
+  </tr>
+  <div ng-if="ctrl.items.length == 0">Nothing found</div>
+</table>

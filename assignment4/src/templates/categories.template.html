@@ -1,0 +1,13 @@
+<p><a ui-sref="home">Home</a> &gt; categories</p>
+<table>
+  <tr>
+    <th>short name</th>
+    <th>name</th>
+    <th>special instructions</th>
+  </tr>
+  <tr ng-repeat="category in ctrl.categories">
+    <th>{{category.short_name}}</th>
+    <th><a ui-sref='items({categoryShortName: category.short_name})'>{{category.name}}</a></th>
+    <th>{{category.special_instructions}}</th>
+  </tr>
+</table>
