@@ -15,15 +15,15 @@
 
   	// home
   	.state('home', {
-  		url: '/',
+  		url: 'assignment4/',
   		templateUrl: '/src/templates/home.template.html'
   	})
 
   	// categories
   	.state('categories', {
-  		url: '/categories',
+  		url: 'assignment4/categories',
   		//component: 'categories',
-      templateUrl: '/src/templates/categories.template.html',
+      templateUrl: 'assignment4/src/templates/categories.template.html',
   		controller: 'CategoriesController as ctrl',
       resolve: {
         data: ['MenuDataService', function (MenuDataService) {
@@ -32,8 +32,8 @@
       }
   	})
     .state('items', {
-      url: '/categories/{categoryShortName}/items',
-      templateUrl: 'src/templates/items.template.html',
+      url: 'assignment4/categories/{categoryShortName}/items',
+      templateUrl: 'assignment4src/templates/items.template.html',
       controller: 'ItemsController as ctrl',
       resolve: {
           data: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
