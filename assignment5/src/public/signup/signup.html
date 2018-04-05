@@ -1,0 +1,23 @@
+<h1> this is the sign up page </h1>
+<form name="regForm" novalidate>
+  <div>First Name:</div>
+  <input class="input-message" type="text" name="firstname" ng-model="signupCtrl.user.firstname" required>
+  <span class="error-message" ng-if="regForm.firstname.$touched && regForm.firstname.$error.required">First name must be specified</span>
+  <div>Last Name:</div>
+  <input class="input-message" type="text" name="lastname" ng-model="signupCtrl.user.lastname" required>
+  <span class="error-message" ng-if="regForm.lastname.$error.required && regForm.lastname.$touched">Last name must be specified</span>
+  <div>Email Address:</div>
+  <input class="input-message" type="text" name="email" ng-model="signupCtrl.user.email" required>
+  <span class="error-message" ng-if="regForm.email.$touched && regForm.email.$error.required">Email must be specified</span>
+  <div>Phone Number:</div>
+  <input class="input-message" type="text" name="phone" ng-model="signupCtrl.user.phone" required>
+  <span class="error-message" ng-if="regForm.phone.$touched && regForm.phone.$error.required">Phone number must be specified</span>
+  <div>Menu Number of Favorite Dish:</div>
+  <input class="input-message" type="text" name="menuNumber" ng-model="signupCtrl.user.menuNumber" required>
+  <span class="error-message" ng-if="regForm.menuNumber.$touched && regForm.menuNumber.$error.required">Favorite dish must be specified</span>
+  <div>
+    <button type="submit" ng-click="signupCtrl.submit()">Submit</button>
+    <span ng-if="!signupCtrl.isMenuNumberValid">No such menu number exists</span>
+    <span ng-if="signupCtrl.isUserInfoSaved">Your information has been saved</span>
+  </div>
+</form>
