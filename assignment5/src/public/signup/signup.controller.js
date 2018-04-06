@@ -19,7 +19,7 @@
       if (ctrl.user == undefined || ctrl.user.menuNumber == undefined) {
         return;
       }
-      MenuService.getMenuItems(ctrl.user.menuNumber).then(function(response) {
+      MenuService.getMenuItemData(ctrl.user.menuNumber).then(function(response) {
         UserInfoService.setUser(ctrl.user);
         ctrl.isMenuNumberValid = true;
         ctrl.isUserInfoSaved = true;
