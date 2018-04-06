@@ -21,7 +21,6 @@ function UserInfoService() {
     service.setPhone(user.phone);
     service.setMenuNumber(user.menuNumber);
     service.hasRegistered = true;
-    console.log(service.hasRegistered);
   }
 
   service.reset = function() {

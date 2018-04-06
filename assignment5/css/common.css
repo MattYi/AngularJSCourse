@@ -26,3 +26,8 @@
 .ng-touched.ng-invalid {
   border: 2px red solid;
 }
+
+button {
+    background-color: white;
+    color: red;
+}

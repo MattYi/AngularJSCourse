@@ -24,9 +24,8 @@
       return UserInfoService.getPhone();
     }
 
-    ctrl.hasRegisterred = function() {
-      console.log(UserInfoService.hasRegisterred);
-      return UserInfoService.hasRegisterred;
+    ctrl.hasRegistered = function() {
+      return UserInfoService.hasRegistered;
     }
     console.log("here");
   }

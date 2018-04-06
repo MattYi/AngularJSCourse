@@ -1,17 +1,16 @@
-<h1> this is myinfo page.</h1>
-<div ng-if="myInfoCtrl.hasRegistered()">
-  <div>First name: {{myInfoCtrl.getFirstName()}}</div>
-  <div>Last name: {{myInfoCtrl.getLastName()}}</div>
-  <div>Email: {{myInfoCtrl.getEmail()}}</div>
-  <div>Phone: {{myInfoCtrl.getPhone()}}</div>
-</div>
-<div ng-if="!myInfoCtrl.hasRegistered()">
-  <div>
-    <span>Not Signed Up Yet. </span>
-    <span ui-sref="public.signup">Sign up Now!</span>
-    <div>First name: {{myInfoCtrl.getFirstName()}}</div>
-    <div>Last name: {{myInfoCtrl.getLastName()}}</div>
-    <div>Email: {{myInfoCtrl.getEmail()}}</div>
-    <div>Phone: {{myInfoCtrl.getPhone()}}</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-5">
+    <div ng-if="myInfoCtrl.hasRegistered()">
+      <div>First name: {{myInfoCtrl.getFirstName()}}</div>
+      <div>Last name: {{myInfoCtrl.getLastName()}}</div>
+      <div>Email: {{myInfoCtrl.getEmail()}}</div>
+      <div>Phone: {{myInfoCtrl.getPhone()}}</div>
+    </div>
+    <div ng-if="!myInfoCtrl.hasRegistered()">
+      <div>
+        <span>Not Signed Up Yet. </span>
+        <a ui-sref="public.signup">Sign up Now!</a>
+      </div>
+    </div>
   </div>
 </div>
