@@ -16,7 +16,7 @@
   <input class="input-message" type="text" name="menuNumber" ng-model="signupCtrl.user.menuNumber" required>
   <span class="error-message" ng-if="regForm.menuNumber.$touched && regForm.menuNumber.$error.required">Favorite dish must be specified</span>
   <div>
-    <button type="submit" ng-click="signupCtrl.submit()">Submit</button>
+    <button type="submit" ng-disabled="signUpForm.$invalid" ng-click="signupCtrl.submit()">Submit</button>
     <span ng-if="!signupCtrl.isMenuNumberValid">No such menu number exists</span>
     <span ng-if="signupCtrl.isUserInfoSaved">Your information has been saved</span>
   </div>

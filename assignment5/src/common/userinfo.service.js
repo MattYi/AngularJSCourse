@@ -12,6 +12,7 @@ function UserInfoService() {
   service.email = UNAVAILABLE;
   service.phone = UNAVAILABLE;
   service.menuNumber = UNAVAILABLE;
+  service.hasRegistered = false;
 
   service.setUser = function(user) {
     service.setFirstName(user.firstName);
@@ -19,7 +20,8 @@ function UserInfoService() {
     service.setEmail(user.email);
     service.setPhone(user.phone);
     service.setMenuNumber(user.menuNumber);
-    console.log("here");
+    service.hasRegistered = true;
+    console.log(service.hasRegistered);
   }
 
   service.reset = function() {
@@ -28,6 +30,7 @@ function UserInfoService() {
     service.setEmail(UNAVAILABLE);
     service.setPhone(UNAVAILABLE);
     service.setMenuNumber(UNAVAILABLE);
+    service.hasRegistered = false;
   }
 
   service.setFirstName = function(firstName) {
