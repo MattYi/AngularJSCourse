@@ -20,6 +20,8 @@ function UserInfoService() {
     service.setEmail(user.email);
     service.setPhone(user.phone);
     service.setMenuNumber(user.menuNumber);
+    service.setFavoriteDish(user.favoriteDish);
+    console.log(service.favoriteDish);
     service.hasRegistered = true;
   }
 
@@ -30,6 +32,10 @@ function UserInfoService() {
     service.setPhone(UNAVAILABLE);
     service.setMenuNumber(UNAVAILABLE);
     service.hasRegistered = false;
+  }
+
+  service.setFavoriteDish = function(dish) {
+    service.favoriteDish = dish;
   }
 
   service.setFirstName = function(firstName) {
@@ -70,6 +76,10 @@ function UserInfoService() {
 
   service.getMenuNumber = function() {
     return service.menuNumber;
+  }
+
+  service.getFavoriteDish = function() {
+    return service.favoriteDish;
   }
 }
 

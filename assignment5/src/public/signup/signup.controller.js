@@ -20,6 +20,7 @@
         return;
       }
       MenuService.getMenuItemData(ctrl.user.menuNumber).then(function(response) {
+        ctrl.user.favoriteDish = response.data;
         UserInfoService.setUser(ctrl.user);
         ctrl.isMenuNumberValid = true;
         ctrl.isUserInfoSaved = true;
